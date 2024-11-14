@@ -34,6 +34,9 @@ make defconfig
 make menuconfig
 ```
 
+![busybox_01.png](./assets/busybox_01.png)
+
+
 Change additional configurations:
 ```
 sed -i 's/# CONFIG_STATIC is not set/CONFIG_STATIC=y/' .config
@@ -98,8 +101,6 @@ find . -print0 | cpio --null -ov --format=newc > ../initramfs.cpio
 gzip ../initramfs.cpio
 ```
 
-
-![busybox_01.png](./assets/busybox_01.png)
 
 
  
